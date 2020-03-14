@@ -1,0 +1,1 @@
+SELECT * FROM hunting_krg.role;
