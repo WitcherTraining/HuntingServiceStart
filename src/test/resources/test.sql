@@ -1,1 +1,1 @@
-SELECT * FROM hunting_krg.role;
+SELECT * FROM hunting_krg.roleID;

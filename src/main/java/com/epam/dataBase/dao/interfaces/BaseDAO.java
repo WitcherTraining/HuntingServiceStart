@@ -10,11 +10,11 @@ public interface BaseDAO<T extends Entity> {
 
     void create(T object) throws SQLException, ConnectionPoolException;
 
-    List<T> getAll(int id) throws SQLException, ConnectionPoolException;
+    List<T> getAll() throws SQLException, ConnectionPoolException;
 
-    List<T> getByID(int idOrder) throws SQLException, ConnectionPoolException;
+    Entity getByID(int id) throws SQLException, ConnectionPoolException;
 
-    void editByID(int id, String query) throws SQLException, ConnectionPoolException;
+    void update(int id, T object) throws SQLException, ConnectionPoolException;
 
     void delete(int id) throws SQLException, ConnectionPoolException;
 }

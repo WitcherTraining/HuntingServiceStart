@@ -6,7 +6,7 @@ public class Organization extends Entity {
 
     private String name;
     private String description;
-    private String logo; // ??????????????????
+    private byte[] logo;
     private int languageID;
 
     public String getName() {
@@ -25,11 +25,11 @@ public class Organization extends Entity {
         this.description = description;
     }
 
-    public String getLogo() {
+    public byte[] getLogo() {
         return logo;
     }
 
-    public void setLogo(String logo) {
+    public void setLogo(byte[] logo) {
         this.logo = logo;
     }
 

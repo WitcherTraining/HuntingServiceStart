@@ -9,5 +9,5 @@ public interface UserDAO extends BaseDAO<User> {
 
     void changePassword(String password, int id) throws SQLException, ConnectionPoolException;
 
-    void changeUserRole(String role, int id) throws SQLException;
+    void changeUserRole(String role, int id) throws SQLException, ConnectionPoolException;
 }

@@ -1,13 +1,12 @@
 package com.epam.entity;
 
-import java.util.Date;
 import java.util.Objects;
 
 public class Animal extends Entity {
 
     private String name;
-    private Date termBegin;
-    private Date termEnd;
+    private String termBegin;
+    private String termEnd;
     private int languageID;
 
     public String getName() {
@@ -18,19 +17,19 @@ public class Animal extends Entity {
         this.name = name;
     }
 
-    public Date getTermBegin() {
+    public String getTermBegin() {
         return termBegin;
     }
 
-    public void setTermBegin(Date termBegin) {
+    public void setTermBegin(String termBegin) {
         this.termBegin = termBegin;
     }
 
-    public Date getTermEnd() {
+    public String getTermEnd() {
         return termEnd;
     }
 
-    public void setTermEnd(Date termEnd) {
+    public void setTermEnd(String termEnd) {
         this.termEnd = termEnd;
     }
 

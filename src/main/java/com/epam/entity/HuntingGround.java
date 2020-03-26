@@ -6,8 +6,8 @@ public class HuntingGround extends Entity {
 
     private String name;
     private String description;
-    private String dailyPrice;
-    private String seasonPrice;
+    private double dailyPrice;
+    private double seasonPrice;
     private int organizationID;
     private int languageID;
 
@@ -27,19 +27,19 @@ public class HuntingGround extends Entity {
         this.description = description;
     }
 
-    public String getDailyPrice() {
+    public double getDailyPrice() {
         return dailyPrice;
     }
 
-    public void setDailyPrice(String dailyPrice) {
+    public void setDailyPrice(double dailyPrice) {
         this.dailyPrice = dailyPrice;
     }
 
-    public String getSeasonPrice() {
+    public double getSeasonPrice() {
         return seasonPrice;
     }
 
-    public void setSeasonPrice(String seasonPrice) {
+    public void setSeasonPrice(double seasonPrice) {
         this.seasonPrice = seasonPrice;
     }
 
@@ -64,12 +64,12 @@ public class HuntingGround extends Entity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         HuntingGround that = (HuntingGround) o;
-        return organizationID == that.organizationID &&
+        return Double.compare(that.dailyPrice, dailyPrice) == 0 &&
+                Double.compare(that.seasonPrice, seasonPrice) == 0 &&
+                organizationID == that.organizationID &&
                 languageID == that.languageID &&
                 name.equals(that.name) &&
-                description.equals(that.description) &&
-                dailyPrice.equals(that.dailyPrice) &&
-                seasonPrice.equals(that.seasonPrice);
+                description.equals(that.description);
     }
 
     @Override

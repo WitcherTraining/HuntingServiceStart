@@ -10,7 +10,16 @@ public class User extends Entity {
     private String password;
     private String email;
     private int phone;
-    private String role;
+    private byte[] hunterDocument; // ????
+    private int roleID;
+
+    public byte[] getHunterDocument() {
+        return hunterDocument;
+    }
+
+    public void setHunterDocument(byte[] hunterDocument) {
+        this.hunterDocument = hunterDocument;
+    }
 
     public String getName() {
         return name;
@@ -60,12 +69,12 @@ public class User extends Entity {
         this.phone = phone;
     }
 
-    public String getRole() {
-        return role;
+    public int getRoleID() {
+        return roleID;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setRoleID(int roleID) {
+        this.roleID = roleID;
     }
 
     @Override
@@ -74,17 +83,17 @@ public class User extends Entity {
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
         return phone == user.phone &&
+                roleID == user.roleID &&
                 name.equals(user.name) &&
                 surname.equals(user.surname) &&
                 login.equals(user.login) &&
                 password.equals(user.password) &&
-                email.equals(user.email) &&
-                role.equals(user.role);
+                email.equals(user.email);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, surname, login, password, email, phone, role);
+        return Objects.hash(name, surname, login, password, email, phone, roleID);
     }
 
     @Override
@@ -96,7 +105,7 @@ public class User extends Entity {
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
-                ", role='" + role + '\'' +
+                ", roleID='" + roleID + '\'' +
                 '}';
     }
 }

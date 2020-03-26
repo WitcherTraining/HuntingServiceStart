@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class Permit extends Entity {
 
-    private Date orderDate; // or Calendar????
+    private Date orderDate;
     private int countOrderedAnimals;
     private boolean permitType;
     private int userID;
